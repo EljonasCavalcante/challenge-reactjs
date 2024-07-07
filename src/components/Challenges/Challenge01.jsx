@@ -8,9 +8,9 @@
 // Mostre a mensagem carregando... enquanto o fetch é realizado
 
 import React, { useState } from "react";
-import Product from "../components/Product/Product";
+import Product from "../Product/Product";
 
-const Challenge_useState01 = () => {
+const Challenge01 = () => {
     const [datas, setDatas] = useState();
 
     async function handleClick(e) {
@@ -22,8 +22,8 @@ const Challenge_useState01 = () => {
 
     return (
         <div>
-            <button style={{ marginRight: "10px" }} onClick={handleClick}>notebook</button>
-            <button style={{ marginRight: "10px" }} onClick={handleClick}>smartphone</button>
+            <button style={{ margin: "10px 0" }} onClick={handleClick}>notebook</button>
+            <button style={{ margin: "10px" }} onClick={handleClick}>smartphone</button>
             <button onClick={handleClick}>tablet</button>
             {datas && <Product datas={datas} />}
         </div>
@@ -31,4 +31,4 @@ const Challenge_useState01 = () => {
 
 }
 
-export default Challenge_useState01;
+export default Challenge01;

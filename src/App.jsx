@@ -1,15 +1,18 @@
-import React from 'react';
-import Challenge_useState01 from './Challenge/Challenge_useState01'
-import Challenge01 from './components/Challenges/Challenges01'
-
+import React, { useState } from 'react';
+import Challenge01 from './components/Challenges/Challenge01';
 
 const App = () => {
+  const [showChallenge, setShowChallenge] = useState(false);
+
+  function handleClick() {
+    setShowChallenge((prevMostrar) => !prevMostrar);
+  }
 
   return (
-    <div >
-      <Challenge01 />
-      <Challenge_useState01 />
-    </div>
+    <>
+      <button onClick={handleClick}>Desafio 01 useState &#128509; </button>
+      {showChallenge && <Challenge01 />}
+    </>
   );
 };
 
